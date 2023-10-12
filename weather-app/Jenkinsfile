@@ -8,23 +8,23 @@
             }
         }
 
-          stage('SonarQube analysis') {
-            agent {
-                docker {
-                  image 'sonarsource/sonar-scanner-cli:latest'
-                }
-               }
-               environment {
-        CI = 'true'
-        //  scannerHome = tool 'Sonar'
-        scannerHome='/opt/sonar-scanner'
-    }
-            steps{
-                withSonarQubeEnv('Sonar') {
-                    sh "${scannerHome}/bin/sonar-scanner"
-                }
-            }
-        }
+    //       stage('SonarQube analysis') {
+    //         agent {
+    //             docker {
+    //               image 'sonarsource/sonar-scanner-cli:4.8.1'
+    //             }
+    //            }
+    //            environment {
+    //     CI = 'true'
+    //     //  scannerHome = tool 'Sonar'
+    //     scannerHome='/opt/sonar-scanner'
+    // }
+    //         steps{
+    //             withSonarQubeEnv('Sonar') {
+    //                 sh "${scannerHome}/bin/sonar-scanner"
+    //             }
+    //         }
+    //     }
 
    
 
