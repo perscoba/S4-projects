@@ -20,12 +20,29 @@
     //         }
     //     }
         
-        stage('build') {
+            environment { // dockerhub-key must be the name of the credential created in jenkins
+		DOCKERHUB_CREDENTIALS=credentials('dockerhub-key')
+	}
+    stages {
+
+    stage('Login') {
+
+			steps {
+				sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+			}
+		}
+
+        stage('Hello') {
             steps {
-                echo 'Build stage: Hello World'
-                // Add your build commands here
+                sh '''
+                ls 
+                pwd
+                '''
             }
         }
+    }
+}
+
 
         stage('deploy') {
             steps {
