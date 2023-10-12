@@ -8,6 +8,23 @@ pipeline { //# parent - contians the pipeline hi
             }
         }
 
-     
+
+        stage('test') { //# must have a unique name 
+            steps { // # commands run inside a step 
+                echo 'Hello World'
+            }
+        }
+
+
+
+        stage('deploy') { //# must have a unique name 
+            steps { // # commands run inside a step 
+                echo 'Hello World'
+            }
+        }
+
+
+
+        
     }
 }
