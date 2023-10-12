@@ -6,7 +6,7 @@
     //     scannerHome = '/opt/sonar-scanner'
     // }
 
-    stages {
+    // stages {
     //     stage('SonarQube analysis') {
     //         agent {
     //             docker {
@@ -32,24 +32,21 @@
 			}
 		}
 
-        stage('Hello') {
-            steps {
-                sh '''
-                ls 
-                pwd
-                '''
-            }
-        }
-    }
-}
+        // stage('Hello') {
+        //     steps {
+        //         sh '''
+        //         ls 
+        //         pwd
+        //         '''
+        //     }
+        // }
 
-
-        stage('deploy') {
-            steps {
-                echo 'Deploy stage: run successfully'
-                // Add your deployment commands here
-            }
-        }
+        // stage('deploy') {
+        //     steps {
+        //         echo 'Deploy stage: run successfully'
+        //         // Add your deployment commands here
+        //     }
+        // }
     }
 }
 
