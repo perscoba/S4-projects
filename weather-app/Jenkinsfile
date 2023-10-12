@@ -1,24 +1,24 @@
  pipeline {
     agent any // Any available agent can run this pipeline
 
-    environment {
-        CI = 'true'
-        scannerHome = '/opt/sonar-scanner'
-    }
+    // environment {
+    //     CI = 'true'
+    //     scannerHome = '/opt/sonar-scanner'
+    // }
 
-    stages {
-        stage('SonarQube analysis') {
-            agent {
-                docker {
-                    image 'amd64/sonarqube'
-                }
-            }
-            steps {
-                withSonarQubeEnv('Sonar') {
-                    sh "${scannerHome}/bin/sonar-scanner"
-                }
-            }
-        }
+    // stages {
+    //     stage('SonarQube analysis') {
+    //         agent {
+    //             docker {
+    //                 image 'amd64/sonarqube'
+    //             }
+    //         }
+    //         steps {
+    //             withSonarQubeEnv('Sonar') {
+    //                 sh "${scannerHome}/bin/sonar-scanner"
+    //             }
+    //         }
+    //     }
         
         stage('build') {
             steps {
