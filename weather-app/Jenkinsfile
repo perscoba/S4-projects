@@ -1,9 +1,9 @@
-pipeline { # parent - contians the pipeline
-    agent any # any node can run the job. it can be specified too 
+pipeline { //# parent - contians the pipeline
+    agent any //# any node can run the job. it can be specified too 
 
     stages {
-        stage('build') { # must have a unique name 
-            steps {  # commands run inside a step 
+        stage('build') { //# must have a unique name 
+            steps { // # commands run inside a step 
                 echo 'Hello World'
             }
         }
