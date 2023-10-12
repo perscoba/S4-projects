@@ -1,0 +1,69 @@
+pipeline { # parent - contians the pipeline
+    agent any # any node can run the job. it can be specified too 
+
+    stages {
+        stage('build') { # must have a unique name 
+            steps {  # commands run inside a step 
+                echo 'Hello World'
+            }
+        }
+
+        stage('test') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+
+
+
+
+        stage('deploy') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+
+           # runing linux commands
+        stage('Run Command') {
+            steps {
+                script {
+                    sh 'echo "Hello, World!"'
+                    sh 'ls -l'
+                    // You can run multiple commands here
+                }
+            }
+        }
+
+
+        stage('Run Command') {
+            steps {
+                script {
+                    // Multiple commands within a script block
+                    sh '''
+                        echo "Hello, World!"
+                        ls -l
+                        # You can write more shell commands here
+                    '''
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+         post {
+        success {
+            echo 'Pipeline executed successfully!'
+            // Additional post-build steps for success
+        }
+        failure {
+            echo 'Pipeline failed!'
+            // Additional post-build steps for failure
+        }
+    }
+    }
+}
