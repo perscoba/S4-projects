@@ -35,32 +35,14 @@ pipeline { //# parent - contians the pipeline
         }
 
 
-        stage('Run Command') {
-            steps {
-                script {
-                    // Multiple commands within a script block
-                    sh '''
-                        echo "Hello, World!"
-                        ls -l
-                        //# You can write more shell commands here
-                    '''
-                }
-            }
-        }
+      
 
-
-
-
-
-
-
-
-         post {
-        success {
+        post {
+          success {
             echo 'Pipeline executed successfully!'
             // Additional post-build steps for success
         }
-        failure {
+           failure {
             echo 'Pipeline failed!'
             // Additional post-build steps for failure
         }
