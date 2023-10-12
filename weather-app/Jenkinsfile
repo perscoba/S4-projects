@@ -1,4 +1,4 @@
-pipeline { //# parent - contians the pipeline hi
+ pipeline { //# parent - contians the pipeline hi
     agent any //# any node can run the job. it can be specified too 
 
     stages {
@@ -11,7 +11,7 @@ pipeline { //# parent - contians the pipeline hi
           stage('SonarQube analysis') {
             agent {
                 docker {
-                  image 'sonarsource/sonar-scanner-cli:4.7.0'
+                  image 'sonarsource/sonar-scanner-cli:latest'
                 }
                }
                environment {
