@@ -8,28 +8,6 @@ pipeline { //# parent - contians the pipeline
             }
         }
 
-        stage('test') {
-            steps {
-                echo 'Hello World'
-            }
-        }
-
-        stage('deploy') {
-            steps {
-                echo 'Hello World'
-            }
-        }
-
-          // # runing linux commands
-        stage('Run Command') {
-            steps {
-                script {
-                    sh 'echo "Hello, World!"'
-                    sh 'ls -l'
-                    // You can run multiple commands here
-                }
-            }
-        }
-       
+     
     }
 }
