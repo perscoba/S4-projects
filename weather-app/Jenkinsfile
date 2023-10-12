@@ -6,7 +6,7 @@
     //     scannerHome = '/opt/sonar-scanner'
     // }
 
-    // stages {
+    stages {
     //     stage('SonarQube analysis') {
     //         agent {
     //             docker {
