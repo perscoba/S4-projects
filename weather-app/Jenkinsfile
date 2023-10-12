@@ -10,7 +10,7 @@
         stage('SonarQube analysis') {
             agent {
                 docker {
-                    image 'sonarsource/sonar-scanner-cli'
+                    image 'amd64/sonarqube'
                 }
             }
             steps {
