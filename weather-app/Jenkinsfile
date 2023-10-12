@@ -8,7 +8,7 @@ pipeline { //# parent - contians the pipeline hi
             }
         }
 
-   stage('SonarQube analysis') {
+          stage('SonarQube analysis') {
             agent {
                 docker {
                   image 'sonarsource/sonar-scanner-cli:4.7.0'
@@ -26,6 +26,7 @@ pipeline { //# parent - contians the pipeline hi
             }
         }
 
+   
 
         stage('deploy') { //# must have a unique name 
             steps { // # commands run inside a step 
