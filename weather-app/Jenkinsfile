@@ -8,11 +8,11 @@
 
     stages {
         stage('SonarQube analysis') {
-            agent {
-                docker {
-                    image 'sonarsource/sonar-scanner-cli'
-                }
-            }
+            // agent {
+            //     docker {
+            //         image 'sonarsource/sonar-scanner-cli'
+            //     }
+            // }
             steps {
                 withSonarQubeEnv('Sonar') {
                     sh "${scannerHome}/bin/sonar-scanner"
