@@ -14,9 +14,6 @@ pipeline { //# parent - contians the pipeline
             }
         }
 
-
-
-
         stage('deploy') {
             steps {
                 echo 'Hello World'
@@ -33,19 +30,6 @@ pipeline { //# parent - contians the pipeline
                 }
             }
         }
-
-
-      
-
-        post {
-          success {
-            echo 'Pipeline executed successfully!'
-            // Additional post-build steps for success
-        }
-           failure {
-            echo 'Pipeline failed!'
-            // Additional post-build steps for failure
-        }
-    }
+       
     }
 }
