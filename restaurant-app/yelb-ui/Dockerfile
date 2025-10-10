@@ -33,7 +33,7 @@ RUN ng build --environment=test --output-path=./test/dist/
 RUN ng build --environment=dev --output-path=./dev/dist/
 
 
-FROM nginx:1.29.0
+FROM nginx:1.29.2
 MAINTAINER EK TECH SOFTWARE SOLUTION
 
 WORKDIR /
