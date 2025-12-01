@@ -13,7 +13,7 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^4.0.1",
-    "@angular/common": "^4.0.1",
+    "@angular/common": "^19.2.16",
     "@angular/compiler": "^4.0.1",
     "@angular/core": "^4.0.1",
     "@angular/forms": "^4.0.1",
@@ -35,7 +35,7 @@
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
-    "@angular/cli": "^1.0.0",
+    "@angular/cli": "^6.0.0",
     "@angular/compiler-cli": "^4.0.1",
     "@types/core-js": "^0.9.34",
     "@types/jasmine": "~2.2.30",
